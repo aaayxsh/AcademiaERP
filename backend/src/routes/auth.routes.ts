@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import { AuthController } from '../controllers/auth.controller';
+import { authenticate } from '../middleware/auth';
+
+const router = Router();
+
+router.post('/login', AuthController.login);
+router.post('/register', AuthController.register);
+router.post('/request-otp', AuthController.requestOtp);
+router.post('/reset-password', AuthController.resetPassword);
+router.get('/me', authenticate, AuthController.getMe);
+
+export default router;

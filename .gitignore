@@ -1,0 +1,79 @@
+# ==========================================
+# AcademiaERP Root Git Ignore Configuration
+# ==========================================
+
+# Dependencies (Root, Backend, Frontend)
+node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables & secrets (keep .env.example files tracked)
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+*.env.production
+
+# Build and distribution outputs
+dist/
+*/dist/
+dist-ssr/
+build/
+*/build/
+out/
+.next/
+
+# Local databases and journals
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+
+# User uploads & ephemeral files
+uploads/
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Python cache & virtual environments
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing & Coverage
+coverage/
+*/coverage/
+*.lcov
+.nyc_output
+
+# IDE, Editor, and OS generated files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Compiler & Bundler build caches
+*.tsbuildinfo
+.eslintcache
+.parcel-cache
